@@ -17,6 +17,6 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 COPY . /var/www/html
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
-COPY --from=composer:1.7 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
 RUN cd ./app && \
     composer install --no-dev -o
